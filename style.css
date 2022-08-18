@@ -1,0 +1,541 @@
+@import url('https://rsms.me/inter/inter.css');
+
+#logo{
+    position: absolute;
+    left: 40px;
+    top: 40px;
+    
+}
+
+main{
+    min-height: calc(100vh - 90px);
+}
+
+body{
+    
+    width: auto;
+    
+    background: #F3F5FC;
+    font-family: 'Inter';
+    font-style: normal;
+    
+
+}
+
+
+#ingresetexto{
+    position: absolute;
+    width: 704px;
+    height: 505px;
+    left: 240px;
+    top: 168px;
+    border: none;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+    background: #F3F5FC;
+    outline: none;
+    
+}
+
+#ingresetexto::placeholder{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+    
+}
+    
+#ingresetexto:focus{
+    border: none;
+}
+
+#mensajeencontrado{
+    position: absolute;
+    top: 40px;
+    left: 1480px; 
+    bottom: 133px;
+    width: 336px;
+    text-align: center;
+    padding: 243px 32px;
+    background: #FFFFFF;
+    border-radius: 32px;
+    margin-left: 40px;
+}
+
+
+
+.noencontrado{
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    height: 58px;
+    margin: 0 0 16px;
+    
+}
+
+.ingreseencriptar{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    height: 48px;
+    color: #495057;
+
+}
+
+i{
+    font-family: 'Inter';
+    font-style: normal;
+    position: absolute;
+    bottom: 249px;
+    right: auto;
+    left: 240px;
+   
+}
+
+.boton{
+    display: block;
+    position: absolute;
+    
+    bottom: 165px;
+    right: auto;
+    left: 240px;
+  
+    
+    
+}
+
+.boton input{
+    
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    width: 328px;
+    padding: 24px;
+
+}
+
+#encriptar{
+    background: #0A3871;
+    border: none;
+    border-radius: 24px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#encriptar:hover{
+    background: #072B61;
+}
+
+#desencriptar{
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    margin: 0 0 0 24px;
+    color: #0A3871;
+    cursor: pointer;
+}
+
+#desencriptar:hover{
+    background: #EFF1FA;
+}
+
+#mensajedesen{
+    position: absolute;
+    top: 40px;
+    left: 1480px;
+    bottom: 133px; 
+    width: 336px;
+    text-align: center;
+    padding: 32px 32px;
+    background: #FFFFFF;
+    border-radius: 32px;
+    margin-left: 40px;
+}
+
+#textodesencriptado{
+    
+    width: 336px;
+    height: 710px;
+   
+}
+
+#demo{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: left;
+    width: auto;
+    height: 600px;
+    overflow:auto;
+}
+
+#copiar{
+    position: absolute;
+    
+    bottom: 165px;
+    left: 1558px;
+  
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    width: 328px;
+    background: #FFFFFF;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    padding: 24px;
+    color: #0A3871;
+    cursor: pointer;
+    
+}   
+
+.copiar:hover{
+    background: #EFF1FA;
+}
+
+footer{
+    
+    text-align: left;
+    padding: 40px;
+    background: #072B61;
+    color: #FFFFFF;
+
+    font-size: small;
+    width:100%;
+    
+}
+
+footer h1{
+    
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-style: bold;
+}
+.datos{
+    margin-bottom: 1em;
+}
+.datos::before{
+    content: '✦ ';
+}
+
+
+
+
+/* pagina para ipad 768x1024*/
+
+@media screen and (max-width:768px){
+    #logo{
+        position: absolute;
+        margin: 0;
+        left: 0;
+        top: 73.42px;
+    
+    }
+    main{
+        min-height: calc(100vh + 400px);
+    }
+    
+    #ingresetexto{
+        position: absolute;
+        left: 0;
+        top: 200px;
+        width: 100%;
+        height: 520px;
+        margin: 40px;
+
+    }
+
+    i{
+        
+        position: absolute;
+        top: 837px;
+        left: 40px;
+        margin: 0;
+       
+    }
+
+    .boton{
+        position: absolute;
+        
+        bottom: 72px;
+        top: 870px;
+        left: 40px;
+        margin: 0;
+        
+        
+    }
+
+    .boton input{
+        width: 328px;
+    }
+
+    .muneco{
+        visibility:hidden;
+        width: 0%;
+        height: 0%;
+    }
+
+    #mensajeencontrado{
+        padding: 32px;
+        width: 624px;
+        height: 343px;
+        position: absolute;
+        top: 1001px;
+        left: 0px;
+        margin-bottom: 40px;
+
+    }
+
+    #mensajedesen{
+        position: absolute;
+        top: 1001px;
+        left: 0px;
+        margin-bottom: 40px;
+        padding: 32px 32px 131px 32px;
+        width: 624px;
+        height: 180px;
+        
+    
+    }
+
+    .noencontrado{
+        height: 29px;
+    }
+    .ingreseencriptar{
+        padding-top: 16px;
+        height: 24px;
+    }
+    #demo{
+        width: auto;
+        height: 180px;
+        overflow:auto;
+        
+    }
+    
+    #copiar{
+        position: absolute;
+        top: 1245px;
+        bottom: 72px;
+        left: 72px;
+        width: 624px;
+        
+    }
+
+
+}
+
+
+
+@media screen and (max-width:375px){
+
+    #logo{
+        position: absolute;
+        margin: 0;
+        left: 0;
+        top: 24px;
+        width: 32px;
+        height: 48px;
+    
+    }
+
+    main{
+        min-height: calc(100vh + 500px);
+    }
+
+    #ingresetexto{
+        position: absolute;
+        left: 0;
+        top: 152px;
+        width: 100%;
+        height: 520px;
+        margin: 16px;
+
+    }
+
+    i{
+        position: absolute;
+        top: 452px;
+        left: 16px;
+    }
+
+    .boton{
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 485px;
+        left: 0;
+        margin: 16px;
+       
+        
+        
+    }
+
+    #desencriptar{
+        position: absolute;
+        top: 81px;
+        left: 0;
+        margin: 0;
+    }
+
+    .boton input{
+        width: 343px;
+    }
+
+    #mensajeencontrado{
+        position: absolute;
+        top: 650px;
+        left: 0px;
+        margin: 16px;
+        padding: 32px 32px 131px 32px;
+        width: 279px;
+        height: 595px;
+        
+
+    }
+
+    #mensajedesen{
+        position: absolute;
+        top: 650px;
+        left: 0px;
+        margin: 16px;
+        padding: 32px 32px 131px 32px;
+        width: 279px;
+        height: 595px;
+        
+    
+    }
+
+    .noencontrado{
+        height: 29px;
+    }
+    .ingreseencriptar{
+        height: 24px;
+    }
+    #demo{
+        width: auto;
+        height: 180px;
+        overflow:auto;
+        
+    }
+
+    #copiar{
+        position: absolute;
+        margin: 0%;
+        top: 1350px;
+        left: 48px;
+        width: 279px;
+        text-align: center;
+        
+    }
+}
+    
+@media screen and (max-width:700px){
+
+    #logo{
+        position: absolute;
+        margin: 0;
+        left: 0;
+        top: 24px;
+        width: 32px;
+        height: 48px;
+    
+    }
+
+    main{
+        min-height: calc(100vh + 600px);
+    }
+
+    #ingresetexto{
+        position: absolute;
+        left: 0;
+        top: 152px;
+        width: 100%;
+        height: 520px;
+        margin: 16px;
+
+    }
+
+    i{
+        position: absolute;
+        top: 452px;
+        left: 16px;
+    }
+
+    .boton{
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        top: 485px;
+        left: 0;
+        margin: 16px;
+       
+        
+        
+    }
+
+    #desencriptar{
+        position: absolute;
+        top: 81px;
+        left: 0;
+        margin: 0;
+    }
+
+    .boton input{
+        width: 343px;
+    }
+
+    #mensajeencontrado{
+        position: absolute;
+        top: 650px;
+        left: 0px;
+        margin: 16px;
+        padding: 32px 32px 131px 32px;
+        width: 279px;
+        height: 595px;
+        
+
+    }
+
+    #mensajedesen{
+        position: absolute;
+        top: 650px;
+        left: 0px;
+        margin: 16px;
+        padding: 32px 32px 131px 32px;
+        width: 279px;
+        height: 595px;
+        
+    
+    }
+
+    .noencontrado{
+        height: 29px;
+    }
+    .ingreseencriptar{
+        height: 24px;
+    }
+    #demo{
+        width: auto;
+        height: 180px;
+        overflow:auto;
+        
+    }
+
+    #copiar{
+        position: absolute;
+        margin: 0%;
+        top: 1350px;
+        left: 48px;
+        width: 279px;
+        text-align: center;
+        
+    }
+}
