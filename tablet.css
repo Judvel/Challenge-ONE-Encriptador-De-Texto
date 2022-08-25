@@ -1,0 +1,22 @@
+#encriptar,
+#desencriptar {
+    width: 49%;
+}
+
+.alura {
+    max-width: 140px;
+    max-height: 140px;
+}
+
+.datos {
+    font-size: 23px;
+}
+
+.logos {
+    max-width: 225px;
+}
+
+.item {
+    max-width: 65px;
+    max-height: 65px;
+}

@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px 0 0 40px;
+}
+
+#ingresetexto {
+    height: 50vh;
+}
+
+.main-encriptador {
+    margin-left: auto;
+    width: calc(100vw - 500px);
+    max-width: 720px;
+}
+
+.muneco {
+    display: inline-block;
+    margin: 0;
+}
+
+#mensajeencontrado {
+    margin: 16px;
+    max-width: 400px;
+    padding: 150px 32px;
+}
+
+.main-salida {
+    width: 100%;
+    max-width: 400px;
+}
+
+#mensajedesen {
+    width: 100%;
+}
+
+#demo {
+    height: 562px;
+}
+
+.item {
+    max-width: 65px;
+    max-height: 65px;
+}

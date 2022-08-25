@@ -3,84 +3,94 @@
 
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
-        <title>Encriptador Alura</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptador Alura</title>
 
-    </head>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="./mobile.css">
+    <link rel="stylesheet" href="./tablet.css" media="screen and (min-width: 600px)">
+    <link rel="stylesheet" href="./desktop.css" media="screen and (min-width: 1000px)">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <body>
-        <h1 id="logo"><img src="imagenes/Logo.png"></h1>
+</head>
 
-        <main>
-            <div>
+<body>
+    <main>
+        <div class="main">
+            <h1 class="logo"><img src="imagenes/Logo.png"></h1>
+            <div class="main-encriptador">
+
                 <form>
                     <textarea id="ingresetexto" placeholder="Ingrese el texto aquí"></textarea>
-    
+
                 </form>
-                
-                
-                <i class='fa fa-exclamation-circle' style='color:#495057'> Solo letras minúsculas y sin acentos</i>
+                <i class="fa fa-exclamation-circle"> Solo letras minúsculas y sin acentos</i>
                 <div class="boton">
                     <input type="button" value="Encriptar" id="encriptar">
                     <input type="button" value="Desencriptar" id="desencriptar">
-                            
                 </div>
+            </div>
 
-            </div>
-            
-            
-        
+        </div>
+
+        <div class="main-salida">
             <div id="mensajedesen">
-                <p id="demo" value=" "></p>
-                        
-                        
+                <span id="demo" value=" "></span>
+                <input type="button" value="Copiar" id="copiar">
             </div>
-                
-            <input type="button" value="Copiar" id="copiar">
-                
             <div id="mensajeencontrado">
                 <img src="imagenes/Muñeco.png" alt="Ningun mensaje encontrado" class="muneco">
                 <p class="noencontrado">Ningún mensaje fue encontrado</p>
                 <p class="ingreseencriptar">Ingresa el texto que desees encriptar o desencriptar.</p>
-                    
+
             </div>
+        </div>
+    </main>
 
-            
-        
-        </main>
-        
-        <footer>
-            <h1>Challenge ONE - Alura + Oracle.</h1>
-            <ul>
-                <li class="datos">Autor: Julio Díaz Velásquez</li>
-                <li class="datos">Correo: Juliodiazvelasquez96@gmail.com</li>
-                <li class="datos">Github: https://github.com/Judvel</li>
-                <li class="datos">Linkedin: https://www.linkedin.com/in/julio-diaz-ice/</li>
+    <footer>
+        <h1><img src="./imagenes/alura-logo.1647533644.svg" alt="Imagen de Alura" class="alura"></h1>
+
+        <div class="footer-datos">
+            <p class="datos">Julio Díaz Velásquez</p>
+            <ul class="logos">
+                <li>
+                    <a href="Juliodiazvelasquez96@gmail.com"><img src="./imagenes/gmail.png" alt="" class="item"></a>
+                </li>
+                <li>
+                    <a href="https://github.com/Judvel"><img src="./imagenes/github.png" alt="" class="item"></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/julio-diaz-ice/"><img src="./imagenes/linkedin.png" alt="" class="item"></a>
+                </li>
             </ul>
-            
 
-        </footer>
-        
-    
-    </body>
+        </div>
+
+
+
+
+    </footer>
+
+</body>
 
 </html>
 
 
 <script>
-
     var text = document.querySelector('#ingresetexto');
-    var vocal = ['e','i','a','o','u'];
+
+    var vocal = ['e', 'i', 'a', 'o', 'u'];
     var encripter = ['enter', 'imes', 'ai', 'ober', 'ufat'];
 
-    
+    document.getElementById('mensajedesen').style.visibility = 'hidden';
 
     /*var button = document.querySelector('#encriptar');*/
+
 
 
 
@@ -91,12 +101,15 @@
     function desencriptar() {
 
         var detext = dtext.value;
+        detext = detext.toLowerCase();
 
         for (var i = 0; i < 5; i++) {
-            detext = detext.replaceAll(encripter[i],vocal[i]);
+            detext = detext.replaceAll(encripter[i], vocal[i]);
         }
-         
-        document.getElementById('mensajeencontrado').style.display = 'none';
+
+
+        document.getElementById('mensajeencontrado').style.visibility = 'hidden';
+        document.getElementById('mensajedesen').style.visibility = 'visible';
         document.getElementById("demo").innerHTML = detext;
     }
 
@@ -106,25 +119,28 @@
 
     document.getElementById('encriptar').addEventListener("click", encriptar);
 
-    function encriptar(){
+    function encriptar() {
         var entext = text.value;
+        entext = entext.toLowerCase()
         for (var i = 0; i < 5; i++) {
-        
+
             entext = entext.replaceAll(vocal[i], encripter[i]);
         }
-        document.getElementById('mensajeencontrado').style.display = 'none';
-        document.getElementById("demo").innerHTML= entext;
+
+        document.getElementById('mensajeencontrado').style.visibility = 'hidden';
+        document.getElementById('mensajedesen').style.visibility = 'visible';
+        document.getElementById("demo").innerHTML = entext;
 
     }
 
     document.getElementById('copiar').addEventListener("click", copiartexto);
+
     function copiartexto() {
-        document.getElementById('mensajeencontrado').style.display = 'none';
+
+        document.getElementById('mensajeencontrado').style.visibility = 'hidden';
+        document.getElementById('mensajedesen').style.visibility = 'visible';
         var copyText = document.getElementById("demo").innerHTML;
 
         navigator.clipboard.writeText(copyText);
     }
-
-    
-
 </script>
